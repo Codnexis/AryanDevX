@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ========================= -->
+    <!-- BASIC SEO META TAGS -->
+    <!-- ========================= -->
+
+ <title>Prateek l Web Developer Portfolio</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="title" content="Prateek | Web Developer Portfolio" />
+    <meta
+      name="description"
+      content="Explore Prateek's modern web developer portfolio featuring creative UI designs, responsive websites, smooth animations, and impressive frontend development projects built using HTML, CSS, and JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="Prateek, Prateek Portfolio, Web Developer, Frontend Developer, Portfolio Website, HTML CSS JavaScript, UI Designer, Responsive Website, JavaScript Developer, Modern Portfolio"
+    />
+    <meta name="author" content="Prateek" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- ========================= -->
+    <!-- FAVICON -->
+    <!-- ========================= -->
+
+    <link rel="icon" type="image/jpg" href="dev.jpg" />
+
+    <!-- ========================= -->
+    <!-- OPEN GRAPH / FACEBOOK / WHATSAPP / LINKEDIN / TELEGRAM -->
+    <!-- ========================= -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aryanntech.vercel.app" />
+    <meta property="og:title" content="Prateek | Web Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Creative frontend developer portfolio with modern UI, interactive effects, responsive layouts, and stylish web projects built using HTML, CSS, and JavaScript."
+    />
+    <meta property="og:image" content="dev.jpg" />
+
+    <!-- Optional -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Prateek Portfolio" />
+
+    <!-- ========================= -->
+    <!-- TWITTER / X META TAGS -->
+    <!-- ========================= -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://aryanntech.vercel.app/" />
+    <meta name="twitter:title" content="Prateek | Web Developer Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Check out Prateek's modern portfolio website showcasing frontend development, premium UI design, animations, and responsive web projects."
+    />
+    <meta name="twitter:image" content="dev.jpg" />
+
+    <!-- ========================= -->
+    <!-- APPLE / IOS SUPPORT -->
+    <!-- ========================= -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Prateek Portfolio" />
+
+    <!-- ========================= -->
+    <!-- WINDOWS TILE -->
+    <!-- ========================= -->
+
+    <meta name="msapplication-TileColor" content="#0f172a" />
+
+    <!-- ========================= -->
+    <!-- CANONICAL URL -->
+    <!-- ========================= -->
+
+    <link rel="canonical" href="https://aryanntech.vercel.app/" />
+
+    <!-- ========================= -->
+    <!-- STRUCTURED DATA (SEO BOOST) -->
+    <!-- ========================= -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Prateek",
+        "url": "https://aryan0boss.srcnexus.app/tech/",
+        "image": "dev.jpg",
+        "jobTitle": "Frontend Web Developer",
+        "description": "Frontend developer creating modern, responsive, and interactive websites using HTML, CSS, and JavaScript."
+      }
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+  /* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Outfit',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+body::-webkit-scrollbar{
+    width:8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:#00f0ff;
+    border-radius:20px;
+}
+
+section{
+    padding:120px 8%;
+    position:relative;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    margin-bottom:15px;
+    background:linear-gradient(to right,#00f0ff,#ff00ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.section-title p{
+    color:#aaa;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* ================= LOADER ================= */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#050816;
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.loader-ring{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:6px solid rgba(255,255,255,.1);
+    border-top:6px solid #00f0ff;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* ================= CUSTOM CURSOR ================= */
+
+.cursor{
+    width:20px;
+    height:20px;
+    border:2px solid #00f0ff;
+    border-radius:50%;
+    position:fixed;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    z-index:9999;
+}
+
+.cursor-blur{
+    width:300px;
+    height:300px;
+    background:#00f0ff30;
+    border-radius:50%;
+    filter:blur(120px);
+    position:fixed;
+    pointer-events:none;
+    z-index:-1;
+    transform:translate(-50%,-50%);
+}
+
+/* ================= BACKGROUND ================= */
+
+.bg-animation{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-2;
+    overflow:hidden;
+}
+
+.bg-animation span{
+    position:absolute;
+    display:block;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:linear-gradient(#00f0ff30,#ff00ff30);
+    filter:blur(50px);
+    animation:float 8s infinite alternate;
+}
+
+.bg-animation span:nth-child(1){
+    top:10%;
+    left:10%;
+}
+
+.bg-animation span:nth-child(2){
+    top:60%;
+    right:10%;
+}
+
+.bg-animation span:nth-child(3){
+    bottom:10%;
+    left:30%;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(50px);
+    }
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    width:100%;
+    z-index:1000;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.2);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#00f0ff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:  '  ';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #00f0ff;
+    transition: .3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width: 100%;
+}
+
+.nav-links a:hover{
+    color:#00f0ff;
+}
+
+.menu-btn{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.menu-btn span{
+    width:25px;
+    height:3px;
+    background:white;
+    margin:4px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+
+.hero-content h1{
+    font-size:4.5rem;
+    line-height:1.2;
+}
+
+.hero-content h1 span{
+    color:#00f0ff;
+}
+
+.hero-content p{
+    margin-top:25px;
+    line-height:1.8;
+    color:#aaa;
+    max-width:600px;
+}
+
+.typing{
+    color:#ff00ff;
+}
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:.4s;
+    font-weight:600;
+}
+
+.primary-btn{
+    background:#00f0ff;
+    color:black;
+}
+
+.secondary-btn{
+    border:1px solid #00f0ff;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px #00f0ff80;
+}
+
+.social-icons{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.05);
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.1);
+    transition:.4s;
+}
+
+.social-icons a:hover{
+    background:#00f0ff;
+    color:black;
+    transform:translateY(-5px);
+}
+
+.hero-card{
+    position:relative;
+    border-radius:30px;
+    overflow:hidden;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(20px);
+    transform-style:preserve-3d;
+    transition:.4s;
+}
+
+.hero-card img{
+    width:100%;
+    display:block;
+}
+
+.card-glow{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(45deg,#00f0ff20,#ff00ff20);
+}
+
+/* ================= CARDS ================= */
+
+.glass-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    padding:30px;
+    transition:.5s;
+}
+
+.glass-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #00f0ff30;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:40px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.stats h3{
+    color:#00f0ff;
+    font-size:2rem;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.progress{
+    margin-top:15px;
+    height:10px;
+    background:#111;
+    border-radius:20px;
+}
+
+.progress-bar{
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(to right,#00f0ff,#ff00ff);
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* ================= PROJECTS ================= */
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.filter{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#111;
+    color:white;
+}
+
+.filter.active{
+    background:#00f0ff;
+    color:black;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card img{
+    width:100%;
+    border-radius:20px;
+}
+
+.project-buttons{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.project-buttons a{
+    text-decoration:none;
+    color:#00f0ff;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline{
+    position:relative;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:20px;
+    top:0;
+    width:3px;
+    height:100%;
+    background:#00f0ff;
+}
+
+.timeline-item{
+    margin-left:60px;
+    margin-bottom:40px;
+    position:relative;
+}
+
+.timeline-item::before{
+    content:'';
+    position:absolute;
+    left:-48px;
+    top:5px;
+    width:18px;
+    height:18px;
+    background:#00f0ff;
+    border-radius:50%;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonial-slider{
+    max-width:700px;
+    margin:auto;
+}
+
+.testimonial{
+    display:none;
+    text-align:center;
+}
+
+.testimonial.active{
+    display:block;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    border-radius:20px;
+    transition:.5s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* ================= PRICING ================= */
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.price-card{
+    text-align:center;
+}
+
+.price-card h2{
+    color:#00f0ff;
+    margin:20px 0;
+    font-size:3rem;
+}
+
+.price-card ul{
+    list-style:none;
+    line-height:2;
+}
+
+.price-card button{
+    margin-top:25px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#00f0ff;
+    cursor:pointer;
+}
+
+/* ================= FAQ ================= */
+
+.faq-item{
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+.faq-question{
+    font-size:1.1rem;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.5s;
+    color:#aaa;
+}
+
+.faq-item.active .faq-answer{
+    max-height:200px;
+    margin-top:15px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:18px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    color:white;
+}
+
+.contact-form button{
+    padding:18px;
+    border:none;
+    border-radius:30px;
+    background:#00f0ff;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:80px 8%;
+    background:#040611;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+footer ul{
+    list-style:none;
+    line-height:2;
+}
+
+.copyright{
+    margin-top:50px;
+    text-align:center;
+    color:#777;
+}
+
+/* ================= TOP BUTTON ================= */
+
+#topBtn{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#00f0ff;
+    color:black;
+    cursor:pointer;
+    display:none;
+    font-size:20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-buttons,
+    .social-icons{
+        justify-content:center;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        position:fixed;
+        top:80px;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#08111f;
+        flex-direction:column;
+        padding:50px;
+        transition:.5s;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .menu-btn{
+        display:flex;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .section-title h2{
+        font-size:2.4rem;
+    }
+
+    .cursor,
+    .cursor-blur{
+        display:none;
+    }
+
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:100px 6%;
+    }
+
+    .hero-content h1{
+        font-size:2.4rem;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+  }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= LOADER ================= -->
+
+    <div id="loader">
+      <div class="loader-ring"></div>
+      <h2 style="margin-top: 20px">Loading Portfolio...</h2>
+    </div>
+
+    <!-- ================= CURSOR ================= -->
+
+    <div class="cursor"></div>
+    <div class="cursor-blur"></div>
+
+    <!-- ================= BG ================= -->
+
+    <div class="bg-animation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">Codnexis</div>
+
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p style="color: #00f0ff">WELCOME TO MY WORLD</p>
+
+        <h1>
+          Hi, I'm <span>Prateek</span><br />
+          <span class="typing"></span>
+        </h1>
+
+        <p>
+          Creating futuristic websites, premium UI experiences, advanced
+          frontend interfaces, bots, tools, and smooth modern digital
+          experiences using only HTML, CSS, and JavaScript.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://t.me/CodnexisBot" class="btn primary-btn">Hire Me</a>
+          <a href="resume.pdf" class="btn secondary-btn">Download CV</a>
+        </div>
+
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/aryan-kasaudhan-codnexis"
+            target="_blank"
+            >LD</a
+          >
+          <a href="https://www.instagram.com/aaryax_n" target="_blank">IG</a>
+          <a href="https://github.com/Codnexis/" target="_blank">GH</a>
+          <a href="https://t.me/CodnexisChat" target="_blank">TG</a>
+        </div>
+      </div>
+
+      <div class="hero-card tilt">
+        <div class="card-glow"></div>
+
+        <img src="main.png" alt="Prateek portfolio profile visual" />
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+      <div class="section-title">
+        <h2>About Me</h2>
+        <p>
+          Creative frontend developer passionate about building modern,
+          responsive, and futuristic web experiences with clean UI and smooth
+          animations.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card tilt">
+          <h3>Who Am I?</h3>
+
+          <p style="margin-top: 20px; line-height: 1.8; color: #aaa">
+            Hi, I'm Prateek — a passionate self-taught web developer who loves
+            creating premium looking websites using HTML, CSS, and JavaScript. I
+            enjoy building futuristic UIs, interactive animations, glassmorphism
+            designs, and smooth user experiences that make websites feel modern
+            and alive. I’m constantly learning new technologies and improving my
+            frontend development skills by creating real-world projects.
+          </p>
+
+          <div class="stats">
+            <div>
+              <h3 class="counter" data-target="25">0</h3>
+              <p>Projects</p>
+            </div>
+
+            <div>
+              <h3 class="counter" data-target="2">0</h3>
+              <p>Years</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item glass-card">
+            <h3>2022</h3>
+            <p>Started frontend development journey.</p>
+          </div>
+
+          <div class="timeline-item glass-card">
+            <h3>2023</h3>
+            <p>Started freelancing and UI projects.</p>
+          </div>
+
+          <div class="timeline-item glass-card">
+            <h3>2024</h3>
+            <p>Focused on advanced animations and 3D effects.</p>
+          </div>
+
+          <div class="timeline-item glass-card">
+            <h3>2025</h3>
+            <p>Developed premium portfolios and bots.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+      <div class="section-title">
+        <h2>My Skills</h2>
+        <p>Technologies and tools I use to build premium experiences.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="glass-card tilt">
+          <h3>HTML</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card tilt">
+          <h3>CSS</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 92%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card tilt">
+          <h3>JavaScript</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card tilt">
+          <h3>UI / UX</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 88%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Modern solutions with futuristic premium quality design.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="glass-card tilt">
+          <h3>UI/UX Design</h3>
+          <p style="margin-top: 15px; color: #aaa">
+            Futuristic and immersive user interfaces.
+          </p>
+        </div>
+
+        <div class="glass-card tilt">
+          <h3>Frontend Development</h3>
+          <p style="margin-top: 15px; color: #aaa">
+            Responsive and interactive websites.
+          </p>
+        </div>
+
+        <div class="glass-card tilt">
+          <h3>Bot Development</h3>
+          <p style="margin-top: 15px; color: #aaa">
+            Telegram automation and utility bots.
+          </p>
+        </div>
+
+        <div class="glass-card tilt">
+          <h3>API Integration</h3>
+          <p style="margin-top: 15px; color: #aaa">
+            Seamless integrations and automation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <p>Selected works and premium portfolio projects.</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="bot">Bot</button>
+        <button class="filter" data-filter="ui">Game</button>
+      </div>
+
+      <div class="projects-grid">
+        <div class="glass-card project-card web tilt">
+          <img
+            src="ayodhya.png"
+          />
+        <h3 style="margin-top: 20px">Ayodhya Heritage</h3>
+          <p style="margin-top: 10px; color: #aaa">
+            Ayodhya ke historical places ko details me showcase karne ke liye informative website.
+          </p>
+          <div class="project-buttons">
+            <a href="https://aryan0boss.srcnexus.app/ayodhya-heritage" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+        <div class="glass-card project-card web tilt">
+          <img
+            src="color.png"
+          />
+
+          <h3 style="margin-top: 20px">Color Picker Web</h3>
+
+          <p style="margin-top: 10px; color: #aaa">
+           Beginners ke liye banaya gaya Color Picker modern website, fast aur fully responsive web dev.
+          </p>
+
+          <div class="project-buttons">
+            <a href="https://aryan0boss.srcnexus.app/color/" target="_blank" rel="noopener noreferrer">View</a>
+            
+          </div>
+        </div>
+
+        <div class="glass-card project-card bot tilt">
+          <img
+            src="bot.png"
+          />
+
+          <h3 style="margin-top: 20px">Telegram Bot</h3>
+
+          <p style="margin-top: 10px; color: #aaa">
+            Utility and automation Telegram bot.
+          </p>
+
+          <div class="project-buttons">
+            <a href="https://t.me/thearyanrobot" target="_blank" rel="noopener noreferrer">View</a>
+            
+          </div>
+        </div>
+
+        <div class="glass-card project-card ui tilt">
+          <img
+            src="snake.png"
+          />
+
+          <h3 style="margin-top: 20px">Snake Game</h3>
+
+          <p style="margin-top: 10px; color: #aaa">
+            Classic Snake Game ka modern Javascript version with smooth controls and clean UI
+          </p>
+
+          <div class="project-buttons">
+            <a href="https://aryan0boss.srcnexus.app/snake" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </div>
+        
+       <div class="glass-card project-card ui tilt">
+          <img
+            src="tic.png"
+          />
+
+          <h3 style="margin-top: 20px">Tic Tac Toe Game</h3>
+
+          <p style="margin-top: 10px; color: #aaa">
+            Classic Tic-tac-toe Game ka modern JavaScript version with smooth controls aur clean UI
+          </p>
+
+          <div class="project-buttons">
+            <a href="https://codnexis.github.io/Tic-Toc-Toe-Game/" target="_blank" rel="noopener noreferrer">View</a>
+            
+          </div>
+      </div>
+      </div>
+    </section>
+    <!-- ================= TESTIMONIALS ================= -->
+    <section>
+      <div class="section-title">
+        <h2>Testimonials</h2>
+        <p>What client say about my work.</p>
+      </div>
+      <div class="testimonial-slider">
+        <div class="glass-card testimonial active">
+          <p>“Amazing futuristic designs and smooth animations.”</p>
+          <h4 style="margin-top: 20px">- Alex</h4>
+        </div>
+        <div class="glass-card testimonial">
+          <p>“Professional frontend developer with premium UI skills.”</p>
+          <h4 style="margin-top: 20px">- Sarah</h4>
+        </div>
+        <div class="glass-card testimonial">
+          <p>“Delivered a responsive and modern website.”</p>
+          <h4 style="margin-top: 20px">- Michael</h4>
+        </div>
+      </div>
+    </section>
+    <!-- ================= GALLERY ================= -->
+    <section>
+      <div class="section-title">
+        <h2>Gallery</h2>
+        <p>Creative visual showcase and design inspirations.</p>
+      </div>
+      <div class="gallery-grid">
+        <img
+          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop"
+        />
+      </div>
+    </section>
+    <!-- ================= PRICING ================= -->
+    <section id="pricing">
+  <div class="section-title">
+    <h2>Website Development Pricing</h2>
+    <p>
+      Want a modern, fast & premium website for your business or personal brand?
+      Choose the perfect package below. ✨
+    </p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <!-- BASIC -->
+    <div class="glass-card price-card tilt">
+      <h3>Basic Website</h3>
+      <h2>₹1,999</h2>
+
+      <ul>
+        <li>1-3 Pages Website</li>
+        <li>Responsive Design</li>
+        <li>Modern UI Layout</li>
+        <li>Mobile Friendly</li>
+        <li>Fast Loading</li>
+      </ul>
+
+      <a href="https://t.me/CodnexisBot" target="_blank">
+        <button>Contact Now</button>
+      </a>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="glass-card price-card tilt">
+      <h3>Premium Website</h3>
+      <h2>₹4,999</h2>
+
+      <ul>
+        <li>Custom Design</li>
+        <li>Advanced Animations</li>
+        <li>Premium UI/UX</li>
+        <li>Contact Form Integration</li>
+        <li>SEO Friendly</li>
+      </ul>
+
+      <a href="https://t.me/CodnexisBot" target="_blank">
+        <button>Contact Now</button>
+      </a>
+    </div>
+
+    <!-- ULTIMATE -->
+    <div class="glass-card price-card tilt">
+      <h3>Ultimate Pro</h3>
+      <h2>₹9,999</h2>
+
+      <ul>
+        <li>Full Custom Website</li>
+        <li>3D Interactive Design</li>
+        <li>Admin Panel</li>
+        <li>API Integration</li>
+        <li>Priority Support</li>
+      </ul>
+
+      <a href="https://t.me/CodnexisBot" target="_blank">
+        <button>Contact Now</button>
+      </a>
+    </div>
+
+  </div>
+</section>
+    <!-- ================= FAQ ================= -->
+    <section>
+      <div class="section-title">
+        <h2>FAQ</h2>
+        <p>Frequently asked questions.</p>
+      </div>
+      <div class="faq-item glass-card">
+        <div class="faq-question">Do you create responsive websites?</div>
+        <div class="faq-answer">
+          Yes, all websites are fully responsive and mobile friendly.
+        </div>
+      </div>
+      <div class="faq-item glass-card">
+        <div class="faq-question">Do you make Telegram bots?</div>
+        <div class="faq-answer">
+          Yes, I develop automation and utility bots.
+        </div>
+      </div>
+      <div class="faq-item glass-card">
+        <div class="faq-question">Can you redesign existing websites?</div>
+        <div class="faq-answer">
+          Absolutely. Modern redesign services are available.
+        </div>
+      </div>
+    </section>
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact Me</h2>
+        <p>Let's create something futuristic together.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="glass-card tilt">
+          <h3>Email</h3>
+          <p style="margin-top: 15px">Codnexiss@gmail.com</p>
+        </div>
+        <div class="glass-card tilt">
+          <h3>Telegram</h3>
+          <p style="margin-top: 15px">@CodnexisBot</p>
+        </div>
+        <div class="glass-card tilt">
+          <h3>Location</h3>
+          <p style="margin-top: 15px">India</p>
+        </div>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="6" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h3>Codnexis</h3>
+            <p style="margin-top:20px; color:#777; line-height:1.8;">
+                Building futuristic premium websites with modern UI and immersive experiences.
+            </p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Projects</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Social Links</h3>
+            <ul>
+                <li>Instagram</li>
+                <li>GitHub</li>
+                <li>Telegram</li>
+            </ul>
+        </div>
+    </div>
+    <p class="copyright">
+        © 2026 Codnexis. All Rights Reserved.
+    </p>
+</footer>
+                
+    <!-- ================= TOP BUTTON ================= -->
+    <button id="topBtn" aria-label="Back to top">↑</button>
+    <script>
+      /* ================= LOADER ================= */
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.display = "none";
+        }
+      });
+
+      /* ================= CURSOR ================= */
+      const cursor = document.querySelector(".cursor");
+      const blur = document.querySelector(".cursor-blur");
+
+      document.addEventListener("mousemove", (e) => {
+        if (cursor && blur) {
+          cursor.style.left = e.clientX + "px";
+          cursor.style.top = e.clientY + "px";
+
+          blur.style.left = e.clientX + "px";
+          blur.style.top = e.clientY + "px";
+        }
+      });
+
+      /* ================= MOBILE MENU ================= */
+      const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+
+        /* Auto close menu on link click */
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+          });
+        });
+      }
+
+      /* ================= TYPING EFFECT ================= */
+      const typing = document.querySelector(".typing");
+
+      const words = [
+        "Frontend Developer",
+        "UI/UX Designer",
+        "Creative Coder",
+        "Bot Developer",
+      ];
+
+      let wordIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+
+      function typeEffect() {
+        if (!typing) return;
+
+        const current = words[wordIndex];
+
+        if (!deleting) {
+          typing.textContent = current.substring(0, charIndex);
+          charIndex++;
+
+          if (charIndex > current.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1000);
+            return;
+          }
+        } else {
+          typing.textContent = current.substring(0, charIndex);
+          charIndex--;
+
+          if (charIndex < 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+        }
+
+        setTimeout(typeEffect, deleting ? 60 : 120);
+      }
+
+      typeEffect();
+
+      /* ================= TESTIMONIAL ================= */
+      const testimonials = document.querySelectorAll(".testimonial");
+      let currentSlide = 0;
+
+      function showSlide() {
+        if (testimonials.length === 0) return;
+
+        testimonials.forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        testimonials[currentSlide].classList.add("active");
+
+        currentSlide++;
+
+        if (currentSlide >= testimonials.length) {
+          currentSlide = 0;
+        }
+      }
+
+      if (testimonials.length > 0) {
+        showSlide();
+        setInterval(showSlide, 3000);
+      }
+
+      /* ================= FAQ ================= */
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+
+      /* ================= COUNTER ================= */
+      const counters = document.querySelectorAll(".counter");
+
+      counters.forEach((counter) => {
+        const updateCounter = () => {
+          const target = +counter.getAttribute("data-target");
+          const current = +counter.innerText;
+
+          const increment = target / 100;
+
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCounter();
+      });
+
+      /* ================= FILTER ================= */
+      const filters = document.querySelectorAll(".filter");
+      const projects = document.querySelectorAll(".project-card");
+
+      filters.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filters.forEach((b) => b.classList.remove("active"));
+
+          btn.classList.add("active");
+
+          const filter = btn.dataset.filter;
+
+          projects.forEach((project) => {
+            if (filter === "all" || project.classList.contains(filter)) {
+              project.style.display = "block";
+            } else {
+              project.style.display = "none";
+            }
+          });
+        });
+      });
+
+      /* ================= TOP BUTTON ================= */
+      const topBtn = document.getElementById("topBtn");
+
+      window.addEventListener("scroll", () => {
+        if (!topBtn) return;
+
+        if (window.scrollY > 400) {
+          topBtn.style.display = "block";
+        } else {
+          topBtn.style.display = "none";
+        }
+      });
+
+      if (topBtn) {
+        topBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      /* ================= 3D TILT ================= */
+      document.querySelectorAll(".tilt").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / 20) * -1;
+          const rotateY = (x - centerX) / 20;
+
+          card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "rotateX(0deg) rotateY(0deg)";
+        });
+      });
+
+      /* ================= CONTACT FORM ================= */
+      
+      const form = document.querySelector(".contact-form");
+
+      if (form && typeof emailjs !== "undefined") {
+        emailjs.init({
+          publicKey: "8Z5tiDrus5lheCQRG"
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          emailjs.sendForm(
+            "service_mof5lro",
+            "template_k7sy2bf",
+            this
+          )
+          .then(() => {
+            alert("Message Sent Successfully!");
+            form.reset();
+          })
+          .catch((error) => {
+            alert("Failed To Send Message!");
+            console.error("EmailJS error:", error);
+          });
+        });
+      } else if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Contact service is temporarily unavailable. Please contact me via Telegram or email.");
+        });
+      }
+
+      /* ================= ACTIVE NAV ================= */
+      const sections = document.querySelectorAll("section");
+      const navItems = document.querySelectorAll(".nav-links a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+
+          if (window.scrollY >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navItems.forEach((link) => {
+          link.classList.remove("active");
+
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </body>
+</html>
