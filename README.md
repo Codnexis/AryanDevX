@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript.  
 This showcases my projects, skills, and experience as a Web Developer & UI Designer.
 
-https://i.ibb.co/twp9D2z7/screenshort.jpg
+![Portfolio Preview](preview.png)
 
 ## ✨ Features
 - **Fully Responsive**: Works perfectly on mobile, tablet, and desktop
