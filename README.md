@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript.  
 This showcases my projects, skills, and experience as a Web Developer & UI Designer.
 
-![Portfolio Preview](preview.png)
+https://i.ibb.co/twp9D2z7/screenshort.jpg
 
 ## ✨ Features
 - **Fully Responsive**: Works perfectly on mobile, tablet, and desktop
@@ -18,7 +18,7 @@ This showcases my projects, skills, and experience as a Web Developer & UI Desig
 - **JavaScript** - Interactivity
 
 ## 🚀 Live Demo
-[View Live Portfolio](https://your-username.github.io/aryan-portfolio/)
+[View Live Portfolio](https://CodNexis.github.io/Aryan-DevX/)
 
 ## 📁 Project Structure
 
@@ -34,7 +34,7 @@ aryan-portfolio/
 ## 📬 Contact
 - **Email**: CodNexiss@gmail.com
 - **LinkedIn**: [linkedin.com/in/aryan](https://linkedin.com/in/aryan-kasaudhan)
-- **GitHub**: [github.com/your-username](https://github.com/CodNexis)
+- **GitHub**: [github.com/CodNexis](https://github.com/CodNexis)
 
 ## 📄 License
 This project is open source and available under the MIT License.
