@@ -8,8 +8,8 @@ A modern and responsive personal portfolio website built to showcase my
 **projects, skills, experience, UI designs, and web development journey.**
 
 [🌐 Live Demo](https://aryanntech.vercel.app/) •
-[💻 GitHub](https://github.com/your-username) •
-[📩 Contact Me](mailto:your-email@gmail.com)
+[💻 GitHub](https://github.com/CodNexis) •
+[📩 Contact Me](mailto:CodNexiss@gmail.com)
 
 </div>
 
@@ -122,7 +122,7 @@ The project can be developed using:
 ## 📂 Project Structure
 
 ```text
-aryan-portfolio/
+aryan-portfolio (Aryan-DevX/
 │
 ├── index.html
 ├── style.css
@@ -133,13 +133,10 @@ aryan-portfolio/
 │
 ├── dev.jpg
 │
-├── icons/
-│   ├── icon-192.png
-│   └── icon-512.png
+├──  icon.png
 │
 ├── assets/
 │   ├── images/
-│   ├── icons/
 │   └── projects/
 │
 └── README.md
@@ -152,7 +149,7 @@ aryan-portfolio/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/aryan-portfolio.git
+git clone https://github.com/CodNexis/aryan-portfolio.git
 ```
 
 ### 2️⃣ Open the project
@@ -184,30 +181,11 @@ For better development and PWA testing, use a local server such as
 
 ---
 
-## 📸 Screenshots
+## 📸 Preview
 
-Add your portfolio screenshots here.
+![Portfolio Preview](preview.png)
 
-```markdown
-![Home Page](assets/screenshots/home.png)
 
-![Projects Section](assets/screenshots/projects.png)
-
-![Mobile View](assets/screenshots/mobile.png)
-```
-
-### Suggested Screenshot Structure
-
-```text
-assets/
-└── screenshots/
-    ├── home.png
-    ├── about.png
-    ├── projects.png
-    └── mobile.png
-```
-
----
 
 ## 🧑‍💻 About Me
 
@@ -323,16 +301,16 @@ Want to connect or collaborate?
 ### 📧 Email
 
 ```text
-your-email@gmail.com
+CodNexiss@gmail.co
 ```
 
 ### 💼 LinkedIn
 
-https://linkedin.com/in/aryan
+https://linkedin.com/in/aryan-kasaudhan
 
 ### 💻 GitHub
 
-https://github.com/your-username
+https://github.com/CodNexis
 
 ### 🌐 Portfolio
 
