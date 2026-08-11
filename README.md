@@ -306,7 +306,7 @@ CodNexiss@gmail.co
 
 ### 💼 LinkedIn
 
-https://linkedin.com/in/aryan-kasaudhan
+https://linkedin.com/in/aryankasaudhan
 
 ### 💻 GitHub
 
