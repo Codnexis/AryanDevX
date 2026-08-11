@@ -208,31 +208,6 @@
   }
   </script>
 
-  <!-- ========================= -->
-  <!-- SERVICE WORKER -->
-  <!-- ========================= -->
-
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("/service-worker.js")
-          .then((registration) => {
-            console.log(
-              "✅ Service Worker registered:",
-              registration.scope
-            );
-          })
-          .catch((error) => {
-            console.error(
-              "❌ Service Worker registration failed:",
-              error
-            );
-          });
-      });
-    }
-  </script>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
