@@ -301,7 +301,7 @@ Want to connect or collaborate?
 ### 📧 Email
 
 ```text
-CodNexiss@gmail.co
+CodNexiss@gmail.com
 ```
 
 ### 💼 LinkedIn
